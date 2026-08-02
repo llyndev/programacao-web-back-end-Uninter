@@ -18,11 +18,15 @@ public class Produto {
     @Column(nullable = false)
     private BigDecimal preco;
 
-    private boolean estoque;
+    private Integer quantidade;
+
+    private Boolean estoque = true;
 
     public String getNome() {
         return nome;
     }
+
+    public Long getId() { return id; }
 
     public void setNome(String nome){
         this.nome = nome;
@@ -36,11 +40,15 @@ public class Produto {
         this.preco = preco;
     }
 
-    public boolean getEstoque() {
-        return getEstoque();
+    public int getQuantidade() {return quantidade;}
+
+    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
+
+    public Boolean getEstoque() {
+        return estoque;
     }
 
-    public void setEstoque(boolean estoque) {
+    public void setEstoque(Boolean estoque) {
         this.estoque = estoque;
     }
 
@@ -48,12 +56,21 @@ public class Produto {
 
     }
 
-    public Produto(String nome, BigDecimal preco, boolean estoque) {
+    public Produto(String nome, BigDecimal preco, int quantidade, Boolean estoque) {
 
         this.nome = nome;
         this.preco = preco;
+        this.quantidade = quantidade;
         this.estoque = estoque;
 
+    }
+
+    public void activeEstoque() {
+        this.estoque = true;
+    }
+
+    public void deactiveEstoque() {
+        this.estoque = false;
     }
 
 
