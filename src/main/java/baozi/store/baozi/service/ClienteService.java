@@ -1,5 +1,6 @@
 package baozi.store.baozi.service;
 
+import baozi.store.baozi.dto.ClienteResponse;
 import baozi.store.baozi.model.Cliente;
 import baozi.store.baozi.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
@@ -16,18 +17,29 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-    public Cliente createCliente(Cliente cliente) {
+    public ClienteResponse createCliente(Cliente cliente) {
         Cliente newCliente = new Cliente(cliente.getNome(), LocalDate.now());
-        return clienteRepository.save(newCliente);
+
+        clienteRepository.save(newCliente);
+
+        return new ClienteResponse(newCliente);
     }
 
-    public List<Cliente> getAll() {
-        return clienteRepository.findAll();
+    public List<ClienteResponse> getAll() {
+        List<Cliente> clientes =  clienteRepository.findAll();
+
+        return clientes
+                .stream()
+                .map(ClienteResponse::new)
+                .toList();
     }
 
-    public Cliente getById(Long id) {
-        return clienteRepository.findById(id)
-                .orElse(null);
+    public ClienteResponse getById(Long id) {
+        Cliente cliente = clienteRepository.findById(id).orElseThrow(
+                () -> new RuntimeException("Cliente não encontrado.")
+        );
+
+        return new ClienteResponse(cliente);
     }
 
     public void deleteCliente(Long id) {
