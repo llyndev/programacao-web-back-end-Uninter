@@ -1,14 +1,14 @@
 package baozi.store.baozi.controller;
 
+import baozi.store.baozi.dto.CancelarPedidoRequest;
 import baozi.store.baozi.dto.PedidoRequest;
 import baozi.store.baozi.dto.PedidoResponse;
 import baozi.store.baozi.model.Pedido;
 import baozi.store.baozi.service.PedidoService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/pedido")
@@ -20,18 +20,25 @@ public class PedidoController {
         this.pedidoService = pedidoService;
     }
 
+    @GetMapping
+    public ResponseEntity<List<PedidoResponse>> getAllPedidos() {
+        return ResponseEntity.ok(pedidoService.getAll());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<PedidoResponse> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(pedidoService.getById(id));
+    }
+
     @PostMapping
     public ResponseEntity<PedidoResponse> registrarPedido(@RequestBody PedidoRequest request) {
-        Pedido pedido = pedidoService.registrarPedido(request);
+        return ResponseEntity.ok(pedidoService.registrarPedido(request));
+    }
 
-        PedidoResponse response = new PedidoResponse(
-                pedido.getCliente().getNome(),
-                pedido.getProduto().getNome(),
-                pedido.getProduto().getPreco(),
-                pedido.getQuantidade()
-        );
-
-        return ResponseEntity.ok(response);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> cancelarPedido(@PathVariable Long id) {
+        pedidoService.cancelarPedido(id);
+        return ResponseEntity.ok().build();
     }
 
 }
