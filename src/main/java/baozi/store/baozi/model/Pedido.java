@@ -20,12 +20,15 @@ public class Pedido {
 
     private Integer quantidade;
 
+    private boolean status;
+
     public Pedido() {}
 
-    public Pedido(Cliente cliente, Produto produto, Integer quantidade) {
+    public Pedido(Cliente cliente, Produto produto, Integer quantidade, boolean status) {
         this.cliente = cliente;
         this.produto = produto;
         this.quantidade = quantidade;
+        this.status = status;
     }
 
     public Cliente getCliente() { return cliente; }
@@ -39,4 +42,9 @@ public class Pedido {
     public Integer getQuantidade() { return quantidade; }
 
     public void setQuantidade(Integer quantidade) { this.quantidade = quantidade; }
+
+    public boolean getStatus() {return status;}
+
+    public void setStatus(boolean status) { this.status = status; }
+
 }
