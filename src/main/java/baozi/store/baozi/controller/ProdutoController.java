@@ -33,4 +33,11 @@ public class ProdutoController {
     public ResponseEntity<Produto> addProduto(@RequestBody Produto produto) {
         return ResponseEntity.ok(produtoService.addProduto(produto));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> removeProduto(@PathVariable Long id) {
+        produtoService.deletarProduto(id);
+
+        return ResponseEntity.ok().build();
+    }
 }
