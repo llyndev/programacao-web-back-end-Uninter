@@ -1,9 +1,7 @@
 package baozi.store.baozi.controller;
 
-import baozi.store.baozi.dto.CancelarPedidoRequest;
 import baozi.store.baozi.dto.PedidoRequest;
 import baozi.store.baozi.dto.PedidoResponse;
-import baozi.store.baozi.model.Pedido;
 import baozi.store.baozi.service.PedidoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
