@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>baozi.store</groupId>
-	<artifactId>baozi</artifactId>
+	<artifactId>fashionstore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>

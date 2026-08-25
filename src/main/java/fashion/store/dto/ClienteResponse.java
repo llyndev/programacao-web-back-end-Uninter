@@ -1,6 +1,6 @@
-package baozi.store.baozi.dto;
+package fashion.store.dto;
 
-import baozi.store.baozi.model.Cliente;
+import fashion.store.model.Cliente;
 
 import java.time.LocalDate;
 

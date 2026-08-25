@@ -1,4 +1,4 @@
-package baozi.store.baozi.exception;
+package fashion.store.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

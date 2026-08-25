@@ -1,13 +1,13 @@
-package baozi.store.baozi.service;
+package fashion.store.service;
 
-import baozi.store.baozi.dto.PedidoRequest;
-import baozi.store.baozi.dto.PedidoResponse;
-import baozi.store.baozi.model.Cliente;
-import baozi.store.baozi.model.Pedido;
-import baozi.store.baozi.model.Produto;
-import baozi.store.baozi.repository.ClienteRepository;
-import baozi.store.baozi.repository.PedidoRepository;
-import baozi.store.baozi.repository.ProdutoRepository;
+import fashion.store.dto.PedidoRequest;
+import fashion.store.dto.PedidoResponse;
+import fashion.store.model.Cliente;
+import fashion.store.model.Pedido;
+import fashion.store.model.Produto;
+import fashion.store.repository.ClienteRepository;
+import fashion.store.repository.PedidoRepository;
+import fashion.store.repository.ProdutoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

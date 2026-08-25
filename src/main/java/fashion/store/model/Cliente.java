@@ -1,4 +1,4 @@
-package baozi.store.baozi.model;
+package fashion.store.model;
 
 import jakarta.persistence.*;
 

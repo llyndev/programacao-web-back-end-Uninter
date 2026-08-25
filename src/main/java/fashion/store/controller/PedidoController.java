@@ -1,8 +1,8 @@
-package baozi.store.baozi.controller;
+package fashion.store.controller;
 
-import baozi.store.baozi.dto.PedidoRequest;
-import baozi.store.baozi.dto.PedidoResponse;
-import baozi.store.baozi.service.PedidoService;
+import fashion.store.dto.PedidoRequest;
+import fashion.store.dto.PedidoResponse;
+import fashion.store.service.PedidoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

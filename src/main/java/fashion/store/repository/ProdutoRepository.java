@@ -1,6 +1,6 @@
-package baozi.store.baozi.repository;
+package fashion.store.repository;
 
-import baozi.store.baozi.model.Produto;
+import fashion.store.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Long> {

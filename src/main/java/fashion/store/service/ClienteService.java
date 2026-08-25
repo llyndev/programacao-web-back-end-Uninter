@@ -1,8 +1,8 @@
-package baozi.store.baozi.service;
+package fashion.store.service;
 
-import baozi.store.baozi.dto.ClienteResponse;
-import baozi.store.baozi.model.Cliente;
-import baozi.store.baozi.repository.ClienteRepository;
+import fashion.store.dto.ClienteResponse;
+import fashion.store.model.Cliente;
+import fashion.store.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;

@@ -1,7 +1,7 @@
-package baozi.store.baozi.service;
+package fashion.store.service;
 
-import baozi.store.baozi.model.Produto;
-import baozi.store.baozi.repository.ProdutoRepository;
+import fashion.store.model.Produto;
+import fashion.store.repository.ProdutoRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

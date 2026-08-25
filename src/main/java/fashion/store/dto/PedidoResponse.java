@@ -1,6 +1,6 @@
-package baozi.store.baozi.dto;
+package fashion.store.dto;
 
-import baozi.store.baozi.model.Pedido;
+import fashion.store.model.Pedido;
 
 import java.math.BigDecimal;
 

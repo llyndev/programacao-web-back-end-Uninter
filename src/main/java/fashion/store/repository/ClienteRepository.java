@@ -1,9 +1,7 @@
-package baozi.store.baozi.repository;
+package fashion.store.repository;
 
-import baozi.store.baozi.model.Cliente;
+import fashion.store.model.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 

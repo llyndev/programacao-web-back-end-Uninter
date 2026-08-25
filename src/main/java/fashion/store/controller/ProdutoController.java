@@ -1,14 +1,11 @@
-package baozi.store.baozi.controller;
+package fashion.store.controller;
 
-import baozi.store.baozi.model.Produto;
-import baozi.store.baozi.service.ProdutoService;
-import org.springframework.http.HttpStatus;
+import fashion.store.model.Produto;
+import fashion.store.service.ProdutoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/produto")

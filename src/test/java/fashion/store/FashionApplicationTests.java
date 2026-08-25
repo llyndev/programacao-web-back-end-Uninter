@@ -1,10 +1,10 @@
-package baozi.store.baozi;
+package fashion.store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BaoziApplicationTests {
+class FashionApplicationTests {
 
 	@Test
 	void contextLoads() {

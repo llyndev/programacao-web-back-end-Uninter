@@ -1,4 +1,4 @@
-package baozi.store.baozi.dto;
+package fashion.store.dto;
 
 public record PedidoRequest(
         Long clienteId,

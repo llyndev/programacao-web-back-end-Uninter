@@ -1,6 +1,6 @@
-package baozi.store.baozi.repository;
+package fashion.store.repository;
 
-import baozi.store.baozi.model.Pedido;
+import fashion.store.model.Pedido;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {

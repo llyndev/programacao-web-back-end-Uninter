@@ -1,13 +1,13 @@
-package baozi.store.baozi;
+package fashion.store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BaoziApplication {
+public class FashionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BaoziApplication.class, args);
+		SpringApplication.run(FashionApplication.class, args);
 	}
 
 }

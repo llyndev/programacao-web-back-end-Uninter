@@ -1,15 +1,12 @@
-package baozi.store.baozi.controller;
+package fashion.store.controller;
 
-import baozi.store.baozi.dto.ClienteResponse;
-import baozi.store.baozi.model.Cliente;
-import baozi.store.baozi.service.ClienteService;
-import org.springframework.http.HttpStatus;
+import fashion.store.dto.ClienteResponse;
+import fashion.store.model.Cliente;
+import fashion.store.service.ClienteService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/cliente")
